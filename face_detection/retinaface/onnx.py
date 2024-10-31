@@ -19,7 +19,7 @@ class RetinaNetDetectorONNX(torch.nn.Module):
         self.device = torch.device("cpu")
         cfg = cfg_re50
         state_dict = load_state_dict_from_url(
-            "https://folk.ntnu.no/haakohu/RetinaFace_ResNet50.pth",
+            "https://huggingface.co/shilongz/FlashFace-SD1.5/resolve/main/retinaface_resnet50.pth",
             map_location=torch_utils.get_device()
         )
         state_dict = {k.replace("module.", ""): v for k, v in state_dict.items()}
